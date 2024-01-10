@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int m=1e9+7;
+int pow(int a,int b){
+int r=1;
+	while (b)
+	{
+		if(b&1){
+			b=b-1;
+			r*=a;
+		}
+		else{
+			b=b/2;
+			a=a*a;
+		}
+	}
+	return r;	
+}
+int inverse(int b){
+	int x=pow(b,m-2);
+}
+int main(){
+	int a,b;
+	cin>>a;
+	cin>>b;
+	
+	cout<<pow(a,b)<<endl;
+	cout<<inverse(b);
+}
